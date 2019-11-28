@@ -12,13 +12,13 @@ public class Category  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ApiModelProperty(name = "栏目id")
+    @ApiModelProperty(value = "栏目id")
     private int id;
 
-    @ApiModelProperty(name = "栏目编号",required = true)
+    @ApiModelProperty(value = "栏目编号")
     private long code;
 
-    @ApiModelProperty(name = "栏目名称",required = true)
+    @ApiModelProperty(value = "栏目名称")
     private String name;
 
     public int getId() {

@@ -48,14 +48,14 @@ public class CategoryController {
         return MessageUtil.success(category);
     }
 
-    @GetMapping("/update")
+    @PostMapping("/update")
     @ApiOperation("更新栏目")
     public Message updateCategory(Category category){
         categoryService.saveOrUpdate(category);
         return MessageUtil.success();
     }
 
-    @GetMapping("/findAl")
+    @GetMapping("/findAll")
     @ApiOperation("查询全部栏目")
     public Message<List<Category>> findAll(){
         List<Category> categories = categoryService.findAll();
